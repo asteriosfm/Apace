@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import styled, { css } from 'styled-components/native';
+import React from "react";
+import styled from 'styled-components/native';
 import { Text } from 'react-native';
 
 import { Site, SelectedSite } from "../interfaces/Site";
@@ -13,7 +13,7 @@ interface Props {
 export default ({ site, onClick =()=>{} }: Props) => {
     return <Container
         onPress={onClick.bind(null, site)}
-        key={Math?.random()}
+        key={site?.url + site?.name}
     >
         <Text>{site?.name}</Text>
         <Text>{site?.url}</Text>

@@ -29,7 +29,7 @@ const withSites = (Component: React.FC) => {
         getSites();
     }, [])
 
-    return <Component sites={ sites } loading={loading} />
+    return <Component sites={sites} loading={loading} />
 }
 
 export default withSites;
